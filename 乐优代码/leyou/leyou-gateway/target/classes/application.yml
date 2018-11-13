@@ -1,0 +1,35 @@
+server:
+  port: 10010
+spring:
+  application:
+    name: leyou-gateway
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka
+  instance:
+    lease-renewal-interval-in-seconds: 5
+    lease-expiration-duration-in-seconds: 15
+zuul:
+  prefix: /api
+  routes:
+    item-service: /item/** # 商品微服务的访问前缀
+    search-service: /search/** # 搜索微服务的访问前缀
+    user-service: /user/** # 用户微服务的访问前缀
+    auth-service: /auth/** # 授权中心微服务的访问前缀
+    cart-service: /cart/** # 购物车微服务的访问前缀
+    order-service: /order/** # 订单微服务的访问前缀
+  add-host-header: true
+  sensitive-headers:  # 把zuul网关的敏感头信息设置为空
+leyou:
+  jwt:
+    pubKeyPath: C:\\tmp\\rsa\\rsa.pub # 公钥地址
+    cookieName: TT_TOKEN
+  filter:
+    allowPaths:
+      - /api/auth
+      - /api/search
+      - /api/user/register
+      - /api/user/check
+      - /api/user/code
+      - /api/item

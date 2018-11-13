@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="leyou-auth-common" />
+        <module name="leyou-auth-service" />
+        <module name="leyou-cart" />
+        <module name="leyou-common" />
+        <module name="leyou-gateway" />
+        <module name="leyou-goods-web" />
+        <module name="leyou-item-interface" />
+        <module name="leyou-item-service" />
+        <module name="leyou-order" />
+        <module name="leyou-registry" />
+        <module name="leyou-search" />
+        <module name="leyou-sms" />
+        <module name="leyou-upload" />
+        <module name="leyou-user-interface" />
+        <module name="leyou-user-service" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>
